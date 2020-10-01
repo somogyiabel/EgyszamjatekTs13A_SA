@@ -82,7 +82,7 @@ export default class Content {
                 .toString()
                 .split("\n")
                 .forEach(i => {
-                    res.write(i);
+                    res.write(`${i.trim()}\n`);
                 });
         }
         //nertes.txt tartalma
@@ -93,7 +93,7 @@ export default class Content {
                 .toString()
                 .split("\n")
                 .forEach(i => {
-                    res.write(i);
+                    res.write(`${i.trim()}\n`);
                 });
         } catch (error) {
             res.write(`Hiba: ${(error as Error).message}`);
