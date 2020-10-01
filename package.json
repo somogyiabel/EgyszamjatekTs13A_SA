@@ -1,0 +1,66 @@
+{
+    "name": "egyszamjatek",
+    "version": "1.0.0",
+    "description": "Egyszámjáték szakmai érettségi feladatat megoldása",
+    "engines": {
+        "node": "14.x"
+    },
+    "main": "App.js",
+    "repository": {
+        "private": true,
+        "type": "git",
+        "url": ""
+    },
+    "scripts": {
+        "start": "node ./dist/App.js",
+        "compile": "tsc",
+        "compile:watch": "tsc --watch",
+        "postinstall": "tsc",
+        "kill": "taskkill /im node.exe /F",
+        "test": "jest || ECHO.",
+        "dev": "nodemon"
+    },
+    "author": "Nits László",
+    "license": "MIT",
+    "dependencies": {
+        "tslib": "^2.0.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.12",
+        "@types/node": "^14.6.2",
+        "@typescript-eslint/eslint-plugin": "^4.0.1",
+        "@typescript-eslint/parser": "^4.0.1",
+        "eslint": "^7.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "jest": "^26.4.2",
+        "nodemon": "^2.0.4",
+        "prettier": "^2.1.1",
+        "ts-jest": "^26.3.0",
+        "typescript": "^4.0.2"
+    },
+    "jest": {
+        "roots": [
+            "<rootDir>/src"
+        ],
+        "preset": "ts-jest",
+        "verbose": true,
+        "testEnvironment": "node",
+        "transform": {
+            "^.+\\.tsx?$": "ts-jest"
+        },
+        "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx",
+            "json"
+        ],
+        "globals": {
+            "ts-jest": {
+                "diagnostics": false
+            }
+        }
+    }
+}
